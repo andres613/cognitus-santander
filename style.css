@@ -1,21 +1,43 @@
-header {
-    display: flex;
-    justify-content: right;
-    border: 1rem solid #000;
+body {
+    padding: 0;
+    margin: 0;
+    background: lightgray;
 }
 
-#pageImage {
-    height: 10rem;
+#generalContainer {
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+
+    grid-template:
+    "nav aside header"  5rem
+    "nav aside main"   auto
+    "nav aside footer" 4rem /
+    8rem 12rem  auto; 
+}
+
+.wrapper {
+    border-radius: 1rem;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: right;
+    border: .2rem solid #000;
+    background: white;
 }
 
 header #pageImage {
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
 }
 
 nav {
+    grid-area: nav;
     border: 1rem solid blue;
+    background: white;
 }
 
 .cocacola {
@@ -23,19 +45,27 @@ nav {
 }
 
 .altura {
-    height: 3rem;
+    /* height: 3rem; */
 }
 
 .vinotinto {
     border: 0.1rem solid black;
-    height: 1rem;
+    /* height: 1rem; */
 }
 
 aside {
+    grid-area: aside;
     border: 1rem solid green;
+    background: white;
+}
+
+main {
+    grid-area: main;
+    background: white;
 }
 
 footer {
+    grid-area: footer;
     border: 1rem solid gray;
-    height: 1rem;
+    background: white;
 }
